@@ -18,7 +18,6 @@ local plugin = {
 					"bufferline", -- better used if background of `neo-tree` or `nvim-tree` is cleared
 				},
 			})
-			-- vim.cmd([[colorscheme monokai-pro]])
 		end,
 	},
 	{
@@ -27,23 +26,18 @@ local plugin = {
 		priority = 1000,
 		config = function()
 			require("monokai-nightasty").setup()
-			--vim.cmd([[colorscheme monokai-nightasty]])
 		end,
 	},
 	{
 		"tiagovla/tokyodark.nvim",
 		config = function(_, opts)
 			require("tokyodark").setup(opts) -- calling setup is optional
-			--vim.cmd [[colorscheme tokyodark]]
 		end,
 	},
 	{
 		"folke/tokyonight.nvim",
 		lazy = false,
 		priority = 1000,
-		config = function()
-			vim.cmd([[colorscheme tokyonight]])
-		end,
 	},
 }
 
