@@ -3,5 +3,3 @@ require("barto.lazy")
 
 vim.g.mapleader = " "
 vim.g.maplocalleader = " "
-
-vim.cmd([[colorscheme monokai-pro]])

@@ -7,17 +7,12 @@ local plugin = {
 			require("monokai-pro").setup({
 				filter = "pro",
 				background_clear = {
-					-- "float_win",
-					-- "toggleterm",
 					"telescope",
-					-- "which-key",
-					-- "renamer",
-					-- "notify",
 					"nvim-tree",
-					-- "neo-tree",
-					"bufferline", -- better used if background of `neo-tree` or `nvim-tree` is cleared
+					"bufferline",
 				},
 			})
+			--vim.cmd([[colorscheme monokai-pro]])
 		end,
 	},
 	{
@@ -29,15 +24,45 @@ local plugin = {
 		end,
 	},
 	{
+		"tanvirtin/monokai.nvim",
+		lazy = false,
+		priority = 1000,
+	},
+	{
 		"tiagovla/tokyodark.nvim",
-		config = function(_, opts)
-			require("tokyodark").setup(opts) -- calling setup is optional
+		config = function(opts)
+			require("tokyodark").setup(opts)
 		end,
 	},
 	{
 		"folke/tokyonight.nvim",
 		lazy = false,
 		priority = 1000,
+		opts = {},
+		config = function()
+			--vim.cmd([[colorscheme tokyonight]])
+		end,
+	},
+	{
+		"sainnhe/sonokai",
+		lazy = false,
+		priority = 1000,
+		config = function()
+			--vim.cmd([[colorscheme sonokai]])
+		end,
+	},
+	{
+		"sainnhe/gruvbox-material",
+		lazy = false,
+		priority = 1000,
+	},
+	{
+		"Mofiqul/vscode.nvim",
+		lazy = false,
+		priority = 1000,
+		config = function()
+			vim.cmd([[colorscheme vscode]])
+		end,
 	},
 }
 
