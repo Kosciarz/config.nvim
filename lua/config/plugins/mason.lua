@@ -6,6 +6,7 @@ return {
 			"pylsp",
 			"rust_analyzer",
 			"clangd",
+			"cmake",
 		},
 	},
 	dependencies = {
