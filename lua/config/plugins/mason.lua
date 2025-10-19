@@ -3,10 +3,8 @@ return {
 	opts = {
 		ensure_installed = {
 			"lua_ls",
-			"ts_ls",
 			"pylsp",
 			"rust_analyzer",
-			"gopls",
 			"clangd",
 		},
 	},
@@ -20,7 +18,7 @@ return {
 				},
 			},
 		},
-        { "mason-org/mason.nvim", opts = {} },
+		{ "mason-org/mason.nvim", opts = {} },
 		"neovim/nvim-lspconfig",
 	},
 }
