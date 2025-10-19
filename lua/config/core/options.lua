@@ -24,6 +24,4 @@ vim.opt.smartcase = true
 vim.opt.backspace = "indent,eol,start"
 
 -- Używanie systemowego schowka
---vim.api.clipboard:append("unnamedplus")
-
 --vim.api.nvim_set_option("clipboard", "unnamedplus")

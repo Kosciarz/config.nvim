@@ -1,0 +1,25 @@
+return {
+	"mason-org/mason-lspconfig.nvim",
+	opts = {
+		"lua_ls",
+		"ts_ls",
+		"pylsp",
+		"rust_analyzer",
+		"gopls",
+		"clangd",
+		"debugpy",
+	},
+	dependencies = {
+		{
+			"folke/lazydev.nvim",
+			ft = "lua",
+			opts = {
+				library = {
+					{ path = "${3rd}/luv/library", words = { "vim%.uv" } },
+				},
+			},
+		},
+		{ "mason-org/mason.nvim", opts = {} },
+		"neovim/nvim-lspconfig",
+	},
+}

@@ -1,7 +1,8 @@
-local plugin = {
+return {
 	{
 		"loctvl842/monokai-pro.nvim",
 		name = "monokai-pro",
+		lazy = false,
 		priority = 1000,
 		config = function()
 			require("monokai-pro").setup({
@@ -12,58 +13,60 @@ local plugin = {
 					"bufferline",
 				},
 			})
-			--vim.cmd([[colorscheme monokai-pro]])
 		end,
 	},
 	{
 		"polirritmico/monokai-nightasty.nvim",
+		name = "monokai-nightasty",
 		lazy = false,
 		priority = 1000,
-		config = function()
-			require("monokai-nightasty").setup()
-		end,
 	},
 	{
 		"tanvirtin/monokai.nvim",
+		name = "monokai",
 		lazy = false,
 		priority = 1000,
 	},
 	{
 		"tiagovla/tokyodark.nvim",
-		config = function(opts)
-			require("tokyodark").setup(opts)
-		end,
+		name = "tokyodark",
+		lazy = false,
+		priority = 1000,
 	},
 	{
 		"folke/tokyonight.nvim",
+		name = "tokyonight",
 		lazy = false,
 		priority = 1000,
-		opts = {},
 		config = function()
-			--vim.cmd([[colorscheme tokyonight]])
+			--vim.cmd.colorscheme("tokyonight-night")
 		end,
 	},
 	{
 		"sainnhe/sonokai",
+		name = "sonokai",
 		lazy = false,
 		priority = 1000,
-		config = function()
-			--vim.cmd([[colorscheme sonokai]])
-		end,
 	},
 	{
 		"sainnhe/gruvbox-material",
+		name = "gruvbox",
 		lazy = false,
 		priority = 1000,
 	},
 	{
 		"Mofiqul/vscode.nvim",
+		name = "vscode",
+		lazy = false,
+		priority = 1000,
+	},
+	{
+		"joshdick/onedark.vim",
+		name = "onedark",
 		lazy = false,
 		priority = 1000,
 		config = function()
-			vim.cmd([[colorscheme vscode]])
+			vim.cmd.colorscheme("onedark")
 		end,
 	},
 }
-
-return plugin
